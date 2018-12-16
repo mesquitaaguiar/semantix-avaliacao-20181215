@@ -1,0 +1,3 @@
+O mesmo código implementado em Spark é normalmente mais rápido que a implementação equivalente em MapReduce. Por quê?
+
+Resp: O que difere é a abordagem de processamento: Spark processa os dados em memória; já MapReduce em disco. Por conta disso a baixa latência do Spark do é muitas vezes 10 vezes superior ao MapReduce.

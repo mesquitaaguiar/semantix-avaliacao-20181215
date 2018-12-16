@@ -1,0 +1,3 @@
+4 - Explique com suas palavras o que é Resilient Distributed Datasets (RDD).
+
+Resp: RDD são uma estrutura de dados fundamental do Spark, onde a coleção de elementos são particionados nos nós do cluster, operados em paralelo e tolerantes a falhas.   	

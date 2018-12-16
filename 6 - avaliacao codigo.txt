@@ -1,0 +1,17 @@
+Explique o que o código Scala abaixo faz.
+
+
+1 val textFile = sc.textFile ("hdfs://...")
+2 val counts = textFile.flatMap ( line => line.split( " " ))
+3		.map ( word => ( word , 1 ))
+4		.reduceByKey ( _ + _ )
+5 counts.saveAsTextFile ( "hdfs://..." )
+
+
+Resp: Considerando que o hdfs esteja apto para distribuir o dataset nos nós do cluster...
+A linha 1 carrega um arquivo txt na variável textFile, instanciando um objeto RDD.
+Linha 2, o comando flatMap o comando "tokeniza" todas as palavras carregadas do arquivo em Array.
+Linha 3, comando map cria a paridade palavra (as "tokenizadas") a quantidade 1. 
+Linha 4, o comando reduceByKey aplica o agrupamento somando os pares com a mesma chave (a aplicação _ + _ tem mesma funcionalidade que um lambda)
+Com o resultado é armazenado na variável counts
+Por fim, é salvo no diretório no hdfs na linha 5.

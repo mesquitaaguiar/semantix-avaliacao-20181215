@@ -1,0 +1,4 @@
+5 - GroupByKey é menos eficiente que reduceByKey em grandes dataset. Por quê?
+
+Resp: O ReduceByKey aplica a combinação dos dados na máquina antes de enviar para o resultado final; bem diferente é o GroupByKey que se transfere todos os dados para a máquina que fará o trabalho final, resultando assim nunca perda de performance por conta dos dados que são passado na rede até a máquina responsável, sem contar que essa máquina ficará responsável pelo processamento e resultado final.
+Embora ambas as funções façam a mesma coisa, ReduceByKey funciona muito melhor em um grande conjunto de dados, pois além de otimizar a utilização de recursos e o tempo de espera pelo resultado final também será menor. 

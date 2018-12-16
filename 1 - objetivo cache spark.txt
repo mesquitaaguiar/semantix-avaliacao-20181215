@@ -1,0 +1,4 @@
+Qual o objetivo do comando cache em Spark?
+
+Resp: Persistir um conjunto de dados em memória, permitindo dessa forma que processamentos ou consultas acesse esse conjunto de dados bem mais rápido.
+Só uma nota, importante salientar que o cache do Spark é uma operação lazy, ou seja, não armazena por padrão os dados em memória, será locado somente após a chamada.

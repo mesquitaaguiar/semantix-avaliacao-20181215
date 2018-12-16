@@ -1,0 +1,3 @@
+Qual é a função do SparkContext ?
+
+Resp: O contexto Spark que é o núcleo da aplicativo Spark, tem como função de estabelecer uma conexão segura com o ambiente do Spark e prover a funcionalidade dos serviços que o Spark pode oferecer.
